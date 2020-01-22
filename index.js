@@ -4,9 +4,7 @@ const server = express();
 
 
 server.use(express.json());
-// Query params =  ?teste=1
-// Route params = /users/1
-// Request body = { "name"}
+
 
 const users = ['Guilherme', 'Talita', 'Yasmin'];
 
@@ -14,7 +12,7 @@ server.use((req, res, next) => {
   console.time("Request");
 
   console.log(`Método: ${req.method}; URL: ${req.url}`);
-  
+
   console.timeEnd("Request");
   return next();
 })
